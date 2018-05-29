@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.cnvex.tb</groupId>
+		<artifactId>tb-manager</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>tb-manager-assemble</artifactId>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.cnvex.tb</groupId>
+			<artifactId>tb-manager-web</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cnvex.tb</groupId>
+			<artifactId>tb-manager-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cnvex.tb</groupId>
+			<artifactId>tb-manager-mapper</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cnvex.tb</groupId>
+			<artifactId>tb-manager-pojo</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+	</dependencies>
+	
+	<build>
+		
+		<plugins>
+			
+			<!-- SpringBoot 打包插件 -->
+			<plugin>
+	        	<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!--版本-->
+				<version>1.4.2.RELEASE</version>	<!-- 只能用“1.4.2.RELEASE”这个版本 -->
+				<configuration>
+			        <mainClass>com.cnvex.tt.Main</mainClass>
+			        <includeSystemScope>true</includeSystemScope>
+			        <!-- <layout>jar</layout> -->
+				</configuration>
+				<executions>
+			        <execution>
+			            <goals>
+			                <goal>repackage</goal>
+			            </goals>
+			        </execution>
+			    </executions>
+			</plugin>
+			
+		</plugins>
+		
+	</build>
+
+</project>
